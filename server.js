@@ -10,7 +10,16 @@ const uploadRoutes = require('./routes/uploadRoutes');
 
 const app = express();
 
-app.use(cors());
+// CORS — Vercel URL allow karo
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://linkvault-frontend.vercel.app',
+    // Apna Vercel URL yahan add karo
+  ],
+  credentials: true,
+}));
+
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
