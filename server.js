@@ -14,8 +14,7 @@ const app = express();
 app.use(cors({
   origin: [
     'http://localhost:5173',
-    'https://linkvault-frontend.vercel.app',
-    // Apna Vercel URL yahan add karo
+    'https://linkvault-frontend-flax.vercel.app',
   ],
   credentials: true,
 }));
